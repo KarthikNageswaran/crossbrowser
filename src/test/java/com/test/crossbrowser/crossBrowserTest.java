@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Parameters;
@@ -12,7 +13,9 @@ import org.testng.annotations.Test;
 public class crossBrowserTest {
 	
 	String chromedriver_path="C:\\Users\\knageswaran\\Downloads\\chromedriver_win32\\chromedriver.exe";
-	String ieDriver_path="C:\\Users\\knageswaran\\Downloads\\IEDriverServer_Win32_3.0.0\\IEDriverServer.exe";
+//	String ieDriver_path="C:\\Users\\knageswaran\\Downloads\\IEDriverServer_Win32_3.0.0\\IEDriverServer.exe";
+	String ieDriver_path="C:\\Users\\knageswaran\\Downloads\\IEDriverServer_x64_3.0.0\\IEDriverServer.exe";
+	
 	WebDriver driver=null;
 	@Test
 	@Parameters("browser")
@@ -28,6 +31,10 @@ public class crossBrowserTest {
 					true);
 			System.setProperty("webdriver.ie.driver", ieDriver_path);
 			driver=new InternetExplorerDriver(capabilities);
+			
+		}else if(browser.equalsIgnoreCase("firefox")){
+//			System.setProperty("webdriver.chrome.driver", chromedriver_path);
+			driver=new FirefoxDriver();
 			
 		}else{
 			System.out.println("Incorrect browser name");
