@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -22,9 +23,11 @@ public class crossBrowserTest {
 			driver=new ChromeDriver();
 			
 		}else if(browser.equalsIgnoreCase("ie")){
-			
+			DesiredCapabilities capabilities =DesiredCapabilities.internetExplorer();
+					capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
+					true);
 			System.setProperty("webdriver.ie.driver", ieDriver_path);
-			driver=new InternetExplorerDriver();
+			driver=new InternetExplorerDriver(capabilities);
 			
 		}else{
 			System.out.println("Incorrect browser name");
