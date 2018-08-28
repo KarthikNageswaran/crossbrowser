@@ -24,7 +24,7 @@ public class crossBrowserTest {
 		if(browser.equalsIgnoreCase("chrome")){
 			System.setProperty("webdriver.chrome.driver", chromedriver_path);
 			driver=new ChromeDriver();
-			
+			System.out.println("chrome browser initialized");
 		}else if(browser.equalsIgnoreCase("ie")){
 			DesiredCapabilities capabilities =DesiredCapabilities.internetExplorer();
 					capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
