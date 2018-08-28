@@ -14,7 +14,7 @@
   
   <test name="browserTest1">
   
-  <parameter name="browser" value="ie"/>
+  <parameter name="browser" value="chrome"/>
   <classes>
   
    <class name="com.test.crossbrowser.crossBrowserTest"/>
