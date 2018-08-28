@@ -14,7 +14,7 @@ public class crossBrowserTest {
 	
 	String chromedriver_path="C:\\Users\\knageswaran\\Downloads\\chromedriver_win32\\chromedriver.exe";
 //	String ieDriver_path="C:\\Users\\knageswaran\\Downloads\\IEDriverServer_Win32_3.0.0\\IEDriverServer.exe";
-// 	String ieDriver_path="C:\\Users\\knageswaran\\Downloads\\IEDriverServer_x64_3.0.0\\IEDriverServer.exe";
+ 	String ieDriver_path="C:\\Users\\knageswaran\\Downloads\\IEDriverServer_x64_3.0.0\\IEDriverServer.exe";
 	
 	WebDriver driver=null;
 	@Test
