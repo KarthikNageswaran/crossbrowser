@@ -21,7 +21,7 @@ public class crossBrowserTest {
 	@Parameters("browser")
 	public void browserTest(String browser) throws Exception{
 		
-		if(browser.equalsIgnoreCase("hrome")){
+		if(browser.equalsIgnoreCase("chrome")){
 			System.setProperty("webdriver.chrome.driver", chromedriver_path);
 			driver=new ChromeDriver();
 			
